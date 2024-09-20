@@ -99,6 +99,11 @@ nav {
 
 .nav-item {
   position: relative;
+  padding: 10px 0px 10px 0px;
+}
+
+ul {
+  margin: 0;
 }
 
 ul > li {
@@ -152,6 +157,9 @@ a {
 }
 
 /* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none;
+}
 
 /* Features Dropdown Menu */
 .features-menu {
@@ -165,12 +173,16 @@ a {
   z-index: 1000;
 }
 
-.hidden {
-  display: none;
+.dropdown-nav-item:hover .features-menu {
+  display: block;
 }
 
-.features-menu:active {
-  display: block;
+.dropdown-arrow {
+  transition: 0.3s ease-in-out;
+}
+
+.dropdown-nav-item:hover .dropdown-arrow {
+  rotate: 180deg;
 }
 
 .features-menu > li {
