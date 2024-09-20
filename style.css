@@ -62,10 +62,144 @@ h6 {
   --almost-white: hsl(0, 0%, 98%);
   --medium-gray: hsl(0, 0%, 41%);
   --almost-black: hsl(0, 0%, 8%);
+  --white: hsl(0, 0%, 100%);
 }
 
 body {
   font-family: "Epilogue", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+}
+
+body p {
+  font-size: 1.125rem;
+}
+
+/* Header and Navigation Styles */
+
+header,
+nav,
+.dropdown,
+.menu-left,
+.menu-right {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+}
+
+nav {
+  justify-content: space-between;
+  flex: 1;
+  margin-bottom: 5px;
+}
+
+.nav-item {
+  position: relative;
+}
+
+ul > li {
+  list-style: none;
+  color: var(--medium-gray);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.7s ease-in-out;
+}
+
+ul > li:hover,
+a:hover {
+  color: var(--almost-black);
+}
+
+a {
+  text-decoration: none;
+  color: var(--medium-gray);
+}
+
+.dropdown-nav-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 7px;
+}
+
+.menu-left {
+  gap: 30px;
+}
+
+.menu-right {
+  gap: 50px;
+}
+
+.menu-left {
+  margin-left: 2rem;
+}
+
+.register {
+  border: var(--medium-gray) 1.5px solid;
+  border-radius: 15px;
+  padding: 8px 20px;
+  transition: 0.7s ease-in-out;
+}
+
+.register:hover {
+  border-color: var(--almost-black);
+  color: var(--almost-black);
+}
+
+/* Dropdown Menu Styles */
+
+/* Features Dropdown Menu */
+.features-menu {
+  position: absolute;
+  top: 40px;
+  left: -60px;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  padding: 20px 15px;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+.features-menu:active {
+  display: block;
+}
+
+.features-menu > li {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  white-space: nowrap;
+}
+
+.features-menu li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--medium-gray);
+  font-size: 0.9rem;
+}
+
+/* Company Dropdown Menu */
+
+.menu-open {
+  display: none;
+}
+
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  margin-right: 15px;
+}
+
+.icon img {
+  width: 15px;
+  height: auto;
 }
