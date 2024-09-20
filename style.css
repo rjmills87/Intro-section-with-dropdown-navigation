@@ -99,7 +99,8 @@ nav {
 
 .nav-item {
   position: relative;
-  padding: 10px 0px 10px 0px;
+  padding: 15px 0;
+  cursor: pointer;
 }
 
 ul {
@@ -128,7 +129,6 @@ a {
 .dropdown-nav-item {
   display: flex;
   align-items: center;
-  cursor: pointer;
   gap: 7px;
 }
 
@@ -156,25 +156,24 @@ a {
   color: var(--almost-black);
 }
 
-/* Dropdown Menu Styles */
-.dropdown-menu {
-  display: none;
-}
-
 /* Features Dropdown Menu */
 .features-menu {
   position: absolute;
-  top: 40px;
-  left: -60px;
+  top: 100%;
+  left: -75px;
   background-color: var(--white);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
   padding: 20px 15px;
   z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .dropdown-nav-item:hover .features-menu {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .dropdown-arrow {
@@ -185,34 +184,44 @@ a {
   rotate: 180deg;
 }
 
-.features-menu > li {
+.features-menu li {
   display: flex;
   align-items: center;
   padding: 5px 10px;
   white-space: nowrap;
+  transition: 0.3s ease ease-in-out;
+}
+
+.features-menu li:hover {
+  color: var(--almost-black);
 }
 
 .features-menu li a {
   display: flex;
   align-items: center;
-  text-decoration: none;
+  gap: 10px;
   color: var(--medium-gray);
   font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
 }
 
-/* Company Dropdown Menu */
-
-.menu-open {
-  display: none;
+.features-menu li a:hover {
+  color: var(--almost-black);
 }
 
 .icon {
   display: inline-block;
   flex-shrink: 0;
-  margin-right: 15px;
+  width: 15px;
+  height: auto;
+  margin-right: 5px;
 }
 
 .icon img {
-  width: 15px;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
