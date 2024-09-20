@@ -7,6 +7,6 @@ featuresDropdownLink.addEventListener("click", function () {
   featuresDropdownMenu.classList.toggle("hidden");
 
   featuresDropdownMenu.classList.contains("active")
-    ? (dropdownArrow.src = "images/icon-arrow-up.svg")
-    : (dropdownArrow.src = "images/icon-arrow-down.svg");
+    ? (dropdownArrow.src = "/images/icon-arrow-up.svg")
+    : (dropdownArrow.src = "/images/icon-arrow-down.svg");
 });

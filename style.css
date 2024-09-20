@@ -110,7 +110,8 @@ ul > li {
 }
 
 ul > li:hover,
-a:hover {
+a:hover,
+.features-menu li a:hover {
   color: var(--almost-black);
 }
 
