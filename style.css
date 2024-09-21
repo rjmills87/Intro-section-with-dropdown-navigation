@@ -88,7 +88,7 @@ nav,
 
 header {
   align-items: center;
-  padding: 1.5rem 2.5rem;
+  padding: 1rem 2.5rem;
 }
 
 nav {
@@ -165,7 +165,6 @@ a {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
   padding: 20px 15px;
-  z-index: 1000;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -228,3 +227,73 @@ a {
   height: 100%;
   object-fit: contain;
 }
+
+.menu-open {
+  display: none;
+}
+
+/* Hero Section Styles */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 75px;
+  max-width: 1100px;
+}
+
+/* Hero Section Text Container */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+h1,
+p {
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 4.75rem;
+  line-height: 1;
+  max-width: 95%;
+}
+
+p {
+  color: var(--medium-gray);
+  font-weight: 500;
+  max-width: 80%;
+}
+
+.hero-btn {
+  font-weight: 700;
+  background-color: black;
+  padding: 15px 30px;
+  border-radius: 15px;
+  color: white;
+  max-width: fit-content;
+  transition: 0.7s ease-in-out;
+  border: black solid 1.5px;
+}
+
+.hero-btn:hover {
+  color: black;
+  background-color: transparent;
+}
+
+.clients-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 100px;
+}
+
+/* Hero Section Image Container */
