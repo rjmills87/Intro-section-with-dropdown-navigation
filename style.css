@@ -309,3 +309,16 @@ p {
 .attribution span {
   font-size: 0.8rem;
 }
+
+/* Mobile devices (smartphones) */
+@media (max-width: 480px) {
+  /* Hero Section */
+
+  .hero-content {
+    flex-direction: column-reverse;
+  }
+}
+
+/* Tablet devices */
+@media (max-width: 768px) {
+}
