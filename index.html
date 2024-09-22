@@ -123,7 +123,11 @@
             </div>
           </div>
           <div class="hero-right">
-            <img id="hero-img" src="images/image-hero-desktop.png" alt="" />
+            <picture>
+              <source media="(max-width: 480px)" srcset="images/image-hero-mobile.png">
+              <source media="(min-width: 481px)" srcset="images/image-hero-desktop.png">
+            <img id="hero-img" src="images/image-hero-desktop.png" alt="Hero Image" />
+          </picture>
           </div>
         </div>
       </section>
