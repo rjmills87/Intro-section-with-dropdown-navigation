@@ -315,6 +315,7 @@ p {
   /* Header/Navigation */
   header {
     justify-content: space-between;
+    padding: 1rem;
   }
   nav {
     display: none;
@@ -328,12 +329,17 @@ p {
 
   .hero {
     padding: 0rem;
+    margin-top: 1rem;
   }
 
   .hero-content {
     flex-direction: column-reverse;
     align-items: center;
     gap: 50px;
+  }
+
+  .hero-right {
+    margin-bottom: 1rem;
   }
 
   .hero-left {
@@ -362,12 +368,23 @@ p {
 
   .clients-container {
     align-items: center;
-    gap: 10px;
-    margin-top: 60px;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
   }
 
-  .clients-container img {
-    padding: 10px;
+  .databiz-logo,
+  .meet-logo,
+  .maker-logo {
+    max-width: 75px;
+    height: auto;
+    display: block;
+  }
+
+  .audiophile-logo {
+    max-width: 55px;
+    height: auto;
+    display: block;
   }
 
   /* Tablet devices */
