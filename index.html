@@ -24,16 +24,19 @@
   <body>
     <header>
       <img src="images/logo.svg" alt="Snap" />
+      <img  class="menu-close"
+      id="close" src="images/icon-close-menu.svg" alt="Close Menu">
       <nav aria-label="Main Navigation">
         <ul class="menu-left">
           <li class="nav-item dropdown-nav-item" id="features-dropdown-link">
+            <span class="dropdown-label">
             Features
             <img
               class="dropdown-arrow"
               src="/images/icon-arrow-down.svg"
               alt="dropdown"
             />
-
+          </span>
             <ul
               class="dropdown-menu features-menu hidden"
               id="features-dropdown-menu"
@@ -74,12 +77,14 @@
             </ul>
           </li>
           <li class="nav-item dropdown-nav-item">
+            <span class="dropdown-label">
             Company
             <img
               class="dropdown-arrow"
               src="images/icon-arrow-down.svg"
               alt="dropdown"
             />
+          </span>
             <ul
               class="dropdown-menu company-menu"
               id="company-dropdown"
