@@ -1,3 +1,17 @@
+// Open/Close Mobile Menu
+const openNav = document.getElementById("open");
+const closeNav = document.getElementById("close");
+const navMenu = document.getElementById("nav-menu");
+
+openNav.addEventListener("click", function () {
+  navMenu.classList.add("active");
+});
+
+closeNav.addEventListener("click", function () {
+  navMenu.classList.remove("active");
+});
+
+// Dropdown Menu Functionality
 const dropdownLink = document.querySelectorAll(".dropdown-nav-item");
 
 dropdownLink.forEach((link) => {
