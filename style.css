@@ -227,7 +227,8 @@ a {
   object-fit: contain;
 }
 
-.menu-open {
+.menu-open,
+.menu-close {
   display: none;
 }
 
@@ -331,12 +332,19 @@ p {
   }
 
   .dropdown-menu {
-    visibility: visible;
-    opacity: 1;
     z-index: 100;
     position: relative;
     box-shadow: none;
-    border: red dotted 1px;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .dropdown-menu:active {
+    display: block;
   }
 
   .features-menu {
@@ -365,6 +373,7 @@ p {
     padding: 0;
     gap: 0;
     min-width: 100%;
+    margin-bottom: 60px;
   }
 
   .register {
@@ -372,6 +381,7 @@ p {
   }
 
   .menu-close {
+    display: block;
     position: absolute;
     right: 15px;
     z-index: 100;
