@@ -1,15 +1,12 @@
-const featuresDropdownLink = document.getElementById("features-dropdown-link");
-const featuresDropdownMenu = document.getElementById("features-dropdown-menu");
-const companyDropdownLink = document.getElementById("company-dropdown-link");
-const companyDropdownMenu = document.getElementById("company-dropdown-menu");
-const dropdownArrow = document.querySelector(".dropdown-arrow");
+const dropdownLink = document.querySelectorAll(".dropdown-nav-item");
 
-featuresDropdownLink.addEventListener("click", function () {
-  featuresDropdownMenu.classList.toggle("hidden");
-  featuresDropdownMenu.classList.toggle("active");
-});
+dropdownLink.forEach((link) => {
+  link.addEventListener("click", function () {
+    const dropdownMenu = link.querySelector(".dropdown-menu");
+    dropdownMenu.classList.toggle("active");
+    dropdownMenu.classList.toggle("hidden");
 
-companyDropdownLink.addEventListener("click", function () {
-  companyDropdownMenu.classList.toggle("hidden");
-  companyDropdownMenu.classList.toggle("active");
+    const dropdownArrow = link.querySelector(".dropdown-arrow");
+    dropdownArrow.classList.toggle("active");
+  });
 });

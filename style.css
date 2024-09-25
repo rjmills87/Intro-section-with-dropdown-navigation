@@ -184,7 +184,7 @@ a {
 }
 
 .dropdown-nav-item:hover .dropdown-arrow {
-  rotate: 180deg;
+  transform: rotate(180deg);
 }
 
 .features-menu li,
@@ -345,6 +345,10 @@ p {
 
   .dropdown-menu:active {
     display: block;
+  }
+
+  .dropdown-arrow.active {
+    transform: rotate(180deg);
   }
 
   .features-menu {
