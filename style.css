@@ -328,8 +328,8 @@ p {
   font-size: 0.8rem;
 }
 
-/* Mobile devices (smartphones) */
-@media (max-width: 480px) {
+/* Mobile devices (tablets/smartphone) */
+@media (max-width: 1024px) {
   /* Header/Navigation */
   header {
     position: relative;
@@ -435,6 +435,11 @@ p {
 
   .hero-right {
     margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .hero-right img {
+    width: 100%;
   }
 
   .hero-left {
