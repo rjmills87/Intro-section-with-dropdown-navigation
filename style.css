@@ -377,6 +377,14 @@ p {
     flex-direction: column;
   }
 
+  .dropdown-arrow {
+    transition: none;
+  }
+
+  .dropdown-nav-item:hover .dropdown-arrow {
+    transform: none;
+  }
+
   .menu-left {
     flex-direction: column;
     margin: 0;
