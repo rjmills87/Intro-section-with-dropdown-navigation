@@ -297,6 +297,7 @@ p {
   padding: 15px 30px;
   border-radius: 15px;
   color: white;
+  text-wrap: nowrap;
   max-width: fit-content;
   transition: 0.7s ease-in-out;
   border: black solid 1.5px;
