@@ -4,12 +4,12 @@ const closeNav = document.getElementById("close");
 const navMenu = document.getElementById("nav-menu");
 const overlay = document.getElementById("overlay");
 
-openNav.addEventListener("click", function () {
+openNav.addEventListener("touchstart", function () {
   navMenu.classList.add("active");
   overlay.classList.add("active");
 });
 
-closeNav.addEventListener("click", function () {
+closeNav.addEventListener("touchstart", function () {
   navMenu.classList.remove("active");
   overlay.classList.remove("active");
 });
@@ -18,7 +18,7 @@ closeNav.addEventListener("click", function () {
 const dropdownLinks = document.querySelectorAll(".dropdown-nav-item");
 
 dropdownLinks.forEach((link) => {
-  link.addEventListener("click", function () {
+  link.addEventListener("touchstart", function () {
     const dropdownMenu = link.querySelector(".dropdown-menu");
     dropdownMenu.classList.toggle("active");
     dropdownMenu.classList.toggle("hidden");
