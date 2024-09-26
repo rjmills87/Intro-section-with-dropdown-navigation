@@ -24,6 +24,8 @@ dropdownLinks.forEach((link) => {
     dropdownMenu.classList.toggle("hidden");
 
     const dropdownArrow = link.querySelector(".dropdown-arrow");
-    dropdownArrow.classList.toggle("active");
+    dropdownMenu.classList.contains("active")
+      ? (dropdownArrow.src = "images/icon-arrow-up.svg")
+      : (dropdownArrow.src = "images/icon-arrow-down.svg");
   });
 });
