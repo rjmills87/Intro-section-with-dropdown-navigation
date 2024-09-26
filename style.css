@@ -75,6 +75,23 @@ body p {
   font-size: 1.125rem;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.overlay.active {
+  display: block;
+}
+
 /* Header and Navigation Styles */
 
 header,
@@ -99,6 +116,7 @@ nav {
 .nav-item {
   position: relative;
   cursor: pointer;
+  padding: 15px 0;
 }
 
 ul {
@@ -128,7 +146,6 @@ a {
   display: flex;
   align-items: center;
   gap: 7px;
-  padding: 15px 0;
 }
 
 .menu-left {
@@ -331,6 +348,7 @@ p {
     right: 0;
     transition: 0.5s ease-in-out;
     transform: translateX(100%);
+    z-index: 10;
   }
 
   nav.active {
@@ -349,7 +367,7 @@ p {
     display: none;
   }
 
-  .dropdown-menu:active {
+  .dropdown-menu.active {
     display: block;
   }
 
@@ -462,9 +480,5 @@ p {
     max-width: 55px;
     height: auto;
     display: block;
-  }
-
-  /* Tablet devices */
-  @media (max-width: 768px) {
   }
 }
