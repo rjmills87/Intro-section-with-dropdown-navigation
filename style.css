@@ -372,6 +372,10 @@ p {
     display: block;
   }
 
+  .dropdown-arrow {
+    transform: none;
+  }
+
   .dropdown-arrow.active {
     transform: rotate(180deg);
   }
