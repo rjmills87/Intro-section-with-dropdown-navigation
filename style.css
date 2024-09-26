@@ -197,13 +197,13 @@ a {
   transition-delay: 0.1s;
 }
 
-/* .dropdown-arrow {
+.dropdown-arrow {
   transition: 0.3s ease-in-out;
-} */
+}
 
-/* .dropdown-nav-item:hover .dropdown-arrow {
+.dropdown-nav-item:hover .dropdown-arrow {
   transform: rotate(180deg);
-} */
+}
 
 .features-menu li,
 .company-menu li {
