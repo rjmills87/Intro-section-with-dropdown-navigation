@@ -4,12 +4,12 @@ const closeNav = document.getElementById("close");
 const navMenu = document.getElementById("nav-menu");
 const overlay = document.getElementById("overlay");
 
-openNav.addEventListener("touchstart", function () {
+openNav.addEventListener("click", function () {
   navMenu.classList.add("active");
   overlay.classList.add("active");
 });
 
-closeNav.addEventListener("touchstart", function () {
+closeNav.addEventListener("click", function () {
   navMenu.classList.remove("active");
   overlay.classList.remove("active");
 });
@@ -18,10 +18,20 @@ closeNav.addEventListener("touchstart", function () {
 const dropdownLinks = document.querySelectorAll(".dropdown-nav-item");
 
 dropdownLinks.forEach((link) => {
-  link.addEventListener("touchstart", function () {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
     const dropdownMenu = link.querySelector(".dropdown-menu");
+
+    // Hide open dropdown
+    dropdownLinks.forEach((openLink) => {
+      if (openLink !== link) {
+        openLink.querySelector(".dropdown-menu").classList.remove("active");
+        openLink.querySelector(".dropdown-arrow").src =
+          "images/icon-arrow-down.svg";
+      }
+    });
+
     dropdownMenu.classList.toggle("active");
-    dropdownMenu.classList.toggle("hidden");
 
     const dropdownArrow = link.querySelector(".dropdown-arrow");
     dropdownMenu.classList.contains("active")

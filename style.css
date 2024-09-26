@@ -360,16 +360,13 @@ p {
     z-index: 100;
     position: relative;
     box-shadow: none;
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .hidden {
     display: none;
   }
 
   .dropdown-menu.active {
     display: block;
+    opacity: 1;
+    visibility: visible;
   }
 
   .features-menu {
