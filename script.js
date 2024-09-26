@@ -12,9 +12,9 @@ closeNav.addEventListener("click", function () {
 });
 
 // Dropdown Menu Functionality
-const dropdownLink = document.querySelectorAll(".dropdown-nav-item");
+const dropdownLinks = document.querySelectorAll(".dropdown-nav-item");
 
-dropdownLink.forEach((link) => {
+dropdownLinks.forEach((link) => {
   link.addEventListener("click", function () {
     const dropdownMenu = link.querySelector(".dropdown-menu");
     dropdownMenu.classList.toggle("active");

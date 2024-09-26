@@ -98,7 +98,6 @@ nav {
 
 .nav-item {
   position: relative;
-  padding: 15px 0;
   cursor: pointer;
 }
 
@@ -129,6 +128,7 @@ a {
   display: flex;
   align-items: center;
   gap: 7px;
+  padding: 15px 0;
 }
 
 .menu-left {
@@ -177,6 +177,7 @@ a {
 .dropdown-nav-item:hover .company-menu {
   visibility: visible;
   opacity: 1;
+  transition-delay: 0.1s;
 }
 
 .dropdown-arrow {
@@ -319,21 +320,21 @@ p {
     padding: 1rem;
   }
   nav {
-    /* display: none; */
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     align-items: start;
     justify-content: start;
     background-color: white;
-    min-height: 100vh;
-    min-width: 66vw;
+    min-height: 100%;
+    min-width: 66%;
     top: 0;
-    right: -500px;
+    right: 0;
     transition: 0.5s ease-in-out;
+    transform: translateX(100%);
   }
 
   nav.active {
-    right: 0;
+    transform: translateX(0);
   }
 
   .dropdown-menu {
