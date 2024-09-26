@@ -22,16 +22,6 @@ dropdownLinks.forEach((link) => {
     e.preventDefault();
 
     const dropdownMenu = link.querySelector(".dropdown-menu");
-
-    // Hide open dropdown
-    dropdownLinks.forEach((openLink) => {
-      if (openLink !== link) {
-        openLink.querySelector(".dropdown-menu").classList.remove("active");
-        openLink.querySelector(".dropdown-arrow").src =
-          "images/icon-arrow-down.svg";
-      }
-    });
-
     dropdownMenu.classList.toggle("active");
 
     const dropdownArrow = link.querySelector(".dropdown-arrow");
